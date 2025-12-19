@@ -20,6 +20,8 @@ class Task
     int getId() const;
     string getTitle() const;
     bool isCompleted() const;
+    void setTitle();
+    void setDescription();
 };
 
 class TodoManager
