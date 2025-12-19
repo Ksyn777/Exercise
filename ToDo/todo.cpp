@@ -41,6 +41,14 @@ int Task::getId() const
     return id;
 }
 
+string Task::getDescription() const{
+    return description;
+}
+
+Priority Task::getPriority() const{
+    return priority;
+}
+
 string Task::getTitle() const
 {
     return title;
@@ -152,3 +160,48 @@ void TodoManager::editTask(int id)
     }
 }
 
+void TodoManager::showAllTasks()
+{
+    for(const auto& task : tasks)
+    {
+        task.display(task.getId());
+        cout<<"---------------------"<<endl;
+    }
+}
+
+bool TodoManager::toggleTask(int id)
+{
+    for(auto& task : tasks)
+    {
+        if(task.getId() == id)
+        {
+            if(task.isCompleted() == false)
+            {
+                cout<<"Marking task as completed."<<endl;
+                task = Task(task.getId(), task.getTitle(), task.getDescription(), task.getPriority(), true);
+                return true;
+            }
+        }
+        else 
+        {
+            throw TaskException("Task with given ID not exist!");
+            return false;
+        }
+    }
+}
+
+void TodoManager::findTasksByTitle(const string& title)
+{
+    for(const auto& task : tasks)
+    {
+        if(task.getTitle().find(title) != string::npos)
+        {
+            task.display(task.getId());
+            cout<<string(20, '-')<<endl;
+        }
+        else 
+        {
+            throw TaskException("To tasks with given title found!");
+        }
+    }
+}
