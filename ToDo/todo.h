@@ -5,6 +5,10 @@ using namespace std;
 
 enum Priority { High, Mid, Low};
 
+class TaskException: public runtime_error{
+    TaskException(const string& message) : runtime_error(message) {}
+};
+
 class Task 
 {
     
@@ -20,8 +24,8 @@ class Task
     int getId() const;
     string getTitle() const;
     bool isCompleted() const;
-    void setTitle();
-    void setDescription();
+    void setTitle(int id);
+    void setDescription(int id);
 };
 
 class TodoManager
@@ -30,7 +34,7 @@ class TodoManager
     static int nextId;
     vector<Task> tasks;
     public:
-    bool addTask(string title, Priority priority);
+    bool addTask(Priority priority);
     bool removeTask(int id);
     void editTask(int id);
     void showAllTasks();

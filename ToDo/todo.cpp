@@ -12,6 +12,30 @@ using namespace std;
 
 int TodoManager::nextId = 0;
 
+void Task::setTitle(int id)
+{
+    string newTitle;
+    cout<<"Enter new title: ";
+    getline(cin, newTitle);
+    if(newTitle.empty())
+    {
+        throw TaskException("Title cannot be empty");
+    }
+    cout<<"You change title: "<<newTitle<<endl;
+}
+
+void Task::setDescription(int id)
+{
+    string newDescription;
+    cout<<"Enter new Description: ";
+    getline(cin, newDescription);
+    if(newDescription.empty())
+    {
+        throw TaskException("Description cannot be empty");
+    }
+    cout<<"You change description: "<<newDescription<<endl;
+
+}
 int Task::getId() const
 {
     return id;
@@ -103,5 +127,28 @@ bool TodoManager::removeTask(int id)
     return false;
 }
 
-void edut
+void TodoManager::editTask(int id)
+{
+    for(auto it = tasks.begin(); it != tasks.end(); ++it)
+    {
+        
+        if(it->getId() == id)
+        {
+            cout<<"Found task: "<<it->getTitle()<<"do you watn remove it ?"<<endl;
+            string answer;
+            getline(cin, answer);
+            transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+            if(answer != "yes")
+            {
+                it->setTitle(id);
+                it->setDescription(id);
+                cout<<"Task edited successfully."<<endl;
+            }
+        }
+        else
+        {
+            throw TaskException("Task with given ID not found!");
+        }
+    }
+}
 
