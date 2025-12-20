@@ -22,8 +22,8 @@ class Task
     bool status;
     public:
     Task(int i, string ti, string desc, Priority prio, bool st = false) :id(i), title(ti), description(desc), priority(prio), status(st) {};
-    void display(int id) const;
-    void setStatus(bool s);
+    void display() const;
+    void setStatus();
     int getId() const;
     string getDescription() const;
     Priority getPriority() const;
@@ -39,6 +39,8 @@ class TodoManager
     static int nextId;
     vector<Task> tasks;
     public:
+    vector<Task>& getTasks(); 
+    const vector<Task>& getTasks() const;
     bool addTask(Priority priority);
     bool removeTask(int id);
     static void setNextId(int id);
@@ -54,6 +56,7 @@ class FileStorage
 {
     public: 
     string filename;
+    FileStorage(const string& fname) : filename(fname) {}
     void save(const vector<Task>& tasks);
     void load(vector<Task>& tasks);
 
