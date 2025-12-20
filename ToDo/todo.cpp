@@ -62,10 +62,10 @@ bool Task::isCompleted() const
         return false;
 }
 
-void Task::display(int id) const
+void Task::display() const
 {
     int prio = priority;
-    cout<<"ID: "<<id<<endl;
+    cout<<"ID: "<<this->id<<endl;
     cout<<"Title: "<<title<<endl;
     cout<<"Description: "<<description<<endl;
     switch (prio)
@@ -75,8 +75,10 @@ void Task::display(int id) const
         break;
     case 1:
          cout<<"Priority: Mid"<<endl; 
+         break;
     case 2:
         cout<<"Priority: LOW"<<endl;
+        break;
     default:
         break;
     }
@@ -90,6 +92,11 @@ void Task::display(int id) const
 void TodoManager::setNextId(int id)
 {
     nextId = id;
+}
+
+void Task::setStatus(bool s)
+{
+    status = s;
 }
 
 bool TodoManager::addTask(Priority priority)
@@ -158,18 +165,15 @@ void TodoManager::editTask(int id)
                 cout<<"Task edited successfully."<<endl;
             }
         }
-        else
-        {
-            throw TaskException("Task with given ID not found!");
-        }
     }
+    throw TaskException("Task with given ID not found!");
 }
 
 void TodoManager::showAllTasks()
 {
     for(const auto& task : tasks)
     {
-        task.display(task.getId());
+        task.display();
         cout<<"---------------------"<<endl;
     }
 }
@@ -183,16 +187,13 @@ bool TodoManager::toggleTask(int id)
             if(task.isCompleted() == false)
             {
                 cout<<"Marking task as completed."<<endl;
-                task = Task(task.getId(), task.getTitle(), task.getDescription(), task.getPriority(), true);
+                task.setStatus(true);
                 return true;
             }
         }
-        else 
-        {
-            throw TaskException("Task with given ID not exist!");
-            return false;
-        }
     }
+    throw TaskException("Task with given ID not exist!");
+    return false;
 }
 
 void TodoManager::findTasksByTitle(const string& title)
@@ -201,14 +202,12 @@ void TodoManager::findTasksByTitle(const string& title)
     {
         if(task.getTitle().find(title) != string::npos)
         {
-            task.display(task.getId());
+            task.display();
             cout<<string(20, '-')<<endl;
         }
-        else 
-        {
-            throw TaskException("To tasks with given title found!");
-        }
+           
     }
+    throw TaskException("To tasks with given title found!"); 
 }
 
 void TodoManager::sortByPriority()
@@ -232,14 +231,14 @@ void FileStorage::save(const vector<Task>& tasks)
     check.close();
     
     ofstream(filename);
-    filename.open("tasks.txt", ios::out | ios::app);
+    filename.open("tasks.txt", ios::out | ios::trunc);
     if(!filename.is_open())
     {
         throw TaskException("Could not open file for writing!");
     }
     for(auto& task : tasks)
     {
-        filename<<task.getId()<<"| "<<task.getTitle()<<"| "<<task.getDescription()<<"| "<<task.getPriority()<<"| "<<task.isCompleted()<<endl;
+        filename<<task.getId()<<"| "<<task.getTitle()<<"|"<<task.getDescription()<<"|"<<task.getPriority()<<"|"<<task.isCompleted()<<endl;
     }
     if(filename.fail())
     {
