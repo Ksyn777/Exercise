@@ -89,6 +89,14 @@ void Task::display() const
 
 }
 
+vector<Task>& TodoManager::getTasks() {
+    return tasks;
+}
+
+const vector<Task>& TodoManager::getTasks() const {
+    return tasks;
+}
+
 void TodoManager::setNextId(int id)
 {
     nextId = id;
@@ -197,8 +205,8 @@ bool TodoManager::toggleTask(int id)
     if(!ended)
     {
         throw TaskException("Task with given ID not exist!");
-        return false;
     }
+    return false;
 }
 
 void TodoManager::findTasksByTitle(const string& title)
