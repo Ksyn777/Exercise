@@ -94,9 +94,9 @@ void TodoManager::setNextId(int id)
     nextId = id;
 }
 
-void Task::setStatus(bool s)
+void Task::setStatus()
 {
-    status = s;
+    status = !status;
 }
 
 bool TodoManager::addTask(Priority priority)
@@ -180,6 +180,7 @@ void TodoManager::showAllTasks()
 
 bool TodoManager::toggleTask(int id)
 {
+    bool ended; 
     for(auto& task : tasks)
     {
         if(task.getId() == id)
@@ -187,27 +188,34 @@ bool TodoManager::toggleTask(int id)
             if(task.isCompleted() == false)
             {
                 cout<<"Marking task as completed."<<endl;
-                task.setStatus(true);
+                task.setStatus();
+                ended = true;
                 return true;
             }
         }
     }
-    throw TaskException("Task with given ID not exist!");
-    return false;
+    if(!ended)
+    {
+        throw TaskException("Task with given ID not exist!");
+        return false;
+    }
 }
 
 void TodoManager::findTasksByTitle(const string& title)
 {
+    bool found;
     for(const auto& task : tasks)
     {
         if(task.getTitle().find(title) != string::npos)
         {
             task.display();
             cout<<string(20, '-')<<endl;
+            found = true;
         }
            
     }
-    throw TaskException("To tasks with given title found!"); 
+    if(!found)
+        throw TaskException("To tasks with given title found!"); 
 }
 
 void TodoManager::sortByPriority()
@@ -223,32 +231,30 @@ void TodoManager::sortByPriority()
 
 void FileStorage::save(const vector<Task>& tasks)
 {
-    ifstream check("tasks.txt");
-    if(!check)
-    {
-        throw TaskException("File not found");    
-    }
-    check.close();
+    ofstream outFile(this->filename, ios::trunc); 
     
-    ofstream(filename);
-    filename.open("tasks.txt", ios::out | ios::trunc);
-    if(!filename.is_open())
+    if(!outFile.is_open())
     {
         throw TaskException("Could not open file for writing!");
     }
-    for(auto& task : tasks)
+
+    for(const auto& task : tasks) 
     {
-        filename<<task.getId()<<"| "<<task.getTitle()<<"|"<<task.getDescription()<<"|"<<task.getPriority()<<"|"<<task.isCompleted()<<endl;
+        outFile << task.getId() << "|" 
+                << task.getTitle() << "|"
+                << task.getDescription() << "|"
+                << static_cast<int>(task.getPriority()) << "|"
+                << task.isCompleted() << "\n";
     }
-    if(filename.fail())
+
+    if(outFile.fail())
     {
-        throw TaskException("Error occured while writing to file!");
+        throw TaskException("Error occurred while writing to file!");
     }
-    else if(filename.goodbit())
-    {
-        cout<<"Tasks saved successfully to file."<<endl;
-    }
-    filename.close();
+    
+    cout << "Tasks saved successfully to file." << endl;
+    
+    outFile.close();
 }
 
 void FileStorage::load(vector<Task>& tasks)
@@ -275,14 +281,14 @@ void FileStorage::load(vector<Task>& tasks)
             getline(ss, priorityStr, '|');
             getline(ss, statusStr);
             tasks.push_back(Task(stoi(idStr), title, description, static_cast<Priority>(stoi(priorityStr)), statusStr == "1"));
-            if(!tasks.empty())
+        }
+        if(!tasks.empty())
+        {
+            int max_id = max_element(tasks.begin(), tasks.end(), [](const Task& a, const Task& b)
             {
-                int max_id = max_element(tasks.begin(), tasks.end(), [](const Task& a, const Task& b)
-                {
-                    return a.getId() < b.getId();
-                })->getId();
-                TodoManager::setNextId(max_id + 1);
-            }
+                return a.getId() < b.getId();
+            })->getId();
+            TodoManager::setNextId(max_id + 1);
         }
     }
 }
