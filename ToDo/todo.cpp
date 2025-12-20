@@ -87,6 +87,11 @@ void Task::display(int id) const
 
 }
 
+void TodoManager::setNextId(int id)
+{
+    nextId = id;
+}
+
 bool TodoManager::addTask(Priority priority)
 {
     string title, description;
@@ -202,6 +207,83 @@ void TodoManager::findTasksByTitle(const string& title)
         else 
         {
             throw TaskException("To tasks with given title found!");
+        }
+    }
+}
+
+void TodoManager::sortByPriority()
+{
+    sort(tasks.begin(), tasks.end(), [](const Task& a, const Task& b)
+    {
+        if(a.getPriority() != b.getPriority())
+            return a.getPriority() < b.getPriority();
+        else 
+            return a.getTitle() < b.getTitle();
+    });         
+}
+
+void FileStorage::save(const vector<Task>& tasks)
+{
+    ifstream check("tasks.txt");
+    if(!check)
+    {
+        throw TaskException("File not found");    
+    }
+    check.close();
+    
+    ofstream(filename);
+    filename.open("tasks.txt", ios::out | ios::app);
+    if(!filename.is_open())
+    {
+        throw TaskException("Could not open file for writing!");
+    }
+    for(auto& task : tasks)
+    {
+        filename<<task.getId()<<"| "<<task.getTitle()<<"| "<<task.getDescription()<<"| "<<task.getPriority()<<"| "<<task.isCompleted()<<endl;
+    }
+    if(filename.fail())
+    {
+        throw TaskException("Error occured while writing to file!");
+    }
+    else if(filename.goodbit())
+    {
+        cout<<"Tasks saved successfully to file."<<endl;
+    }
+    filename.close();
+}
+
+void FileStorage::load(vector<Task>& tasks)
+{
+    tasks.clear();
+    ifstream filename("tasks.txt");
+    if(!filename.is_open())
+    {
+        throw TaskException("Could not open file for reading!");
+    }
+    else
+    {
+        string line;
+        while(getline(filename, line))
+        if(line.empty())
+            continue;
+        else 
+        {
+            stringstream ss(line);
+            string idStr, title, description, priorityStr, statusStr;
+            getline(ss, idStr, '|');
+            getline(ss, title, '|');
+            getline(ss, description, '|');
+            getline(ss, priorityStr, '|');
+            getline(ss, statusStr);
+            tasks.push_back(Task(stoi(idStr), title, description, static_cast<Priority>(stoi(priorityStr)), statusStr == "1"));
+            if(!tasks.empty())
+            {
+                int max_id = max_element(tasks.begin(), tasks.end(), [](const Task& a, const Task& b)
+                {
+                    return a.getId() < b.getId();
+                })->getId();
+                TodoManager::setNextId(max_id + 1);
+            }
         }
     }
 }
