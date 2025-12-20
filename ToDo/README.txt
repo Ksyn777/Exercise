@@ -1,4 +1,4 @@
-# Simple To-Do List Manager (C++)
+Simple To-Do List Manager (C++)
 
 This project follows key software engineering principles: DAO for separating data persistence from logic, 
 and RAII for robust resource management. By using encapsulation, I ensured that the internal state of the task list is protected, 
