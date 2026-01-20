@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/run_tests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\run_tests.dir\\testyWzorce.cpp.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/testyWzorce.cpp",
+  "output": "CMakeFiles/run_tests.dir/testyWzorce.cpp.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/run_tests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\run_tests.dir\\Strategia.cpp.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\Strategia.cpp\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/Strategia.cpp",
+  "output": "CMakeFiles/run_tests.dir/Strategia.cpp.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-build/googlemock",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\build\\_deps\\googletest-src\\googlemock\\src\\gmock-all.cc\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-build/googlemock",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\build\\_deps\\googletest-src\\googlemock\\src\\gmock_main.cc\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-build/googletest",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\build\\_deps\\googletest-src\\googletest\\src\\gtest-all.cc\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-build/googletest",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\build\\_deps\\googletest-src\\googletest\\src\\gtest_main.cc\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+}
+]
