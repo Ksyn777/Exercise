@@ -15,6 +15,8 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(run_tests 
           testyWzorce.cpp 
+          testyObserwator.cpp 
+          Obserwator.cpp
           Strategia.cpp) 
 
 target_link_libraries(run_tests gtest_main)

@@ -225,6 +225,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+Obserwator.obj: Obserwator.cpp.obj
+.PHONY : Obserwator.obj
+
+# target to build an object file
+Obserwator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/Obserwator.cpp.obj
+.PHONY : Obserwator.cpp.obj
+
+Obserwator.i: Obserwator.cpp.i
+.PHONY : Obserwator.i
+
+# target to preprocess a source file
+Obserwator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/Obserwator.cpp.i
+.PHONY : Obserwator.cpp.i
+
+Obserwator.s: Obserwator.cpp.s
+.PHONY : Obserwator.s
+
+# target to generate assembly for a file
+Obserwator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/Obserwator.cpp.s
+.PHONY : Obserwator.cpp.s
+
 Strategia.obj: Strategia.cpp.obj
 .PHONY : Strategia.obj
 
@@ -248,6 +272,30 @@ Strategia.s: Strategia.cpp.s
 Strategia.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/Strategia.cpp.s
 .PHONY : Strategia.cpp.s
+
+testyObserwator.obj: testyObserwator.cpp.obj
+.PHONY : testyObserwator.obj
+
+# target to build an object file
+testyObserwator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyObserwator.cpp.obj
+.PHONY : testyObserwator.cpp.obj
+
+testyObserwator.i: testyObserwator.cpp.i
+.PHONY : testyObserwator.i
+
+# target to preprocess a source file
+testyObserwator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyObserwator.cpp.i
+.PHONY : testyObserwator.cpp.i
+
+testyObserwator.s: testyObserwator.cpp.s
+.PHONY : testyObserwator.s
+
+# target to generate assembly for a file
+testyObserwator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyObserwator.cpp.s
+.PHONY : testyObserwator.cpp.s
 
 testyWzorce.obj: testyWzorce.cpp.obj
 .PHONY : testyWzorce.obj
@@ -290,9 +338,15 @@ help:
 	@echo ... gtest
 	@echo ... gtest_main
 	@echo ... run_tests
+	@echo ... Obserwator.obj
+	@echo ... Obserwator.i
+	@echo ... Obserwator.s
 	@echo ... Strategia.obj
 	@echo ... Strategia.i
 	@echo ... Strategia.s
+	@echo ... testyObserwator.obj
+	@echo ... testyObserwator.i
+	@echo ... testyObserwator.s
 	@echo ... testyWzorce.obj
 	@echo ... testyWzorce.i
 	@echo ... testyWzorce.s

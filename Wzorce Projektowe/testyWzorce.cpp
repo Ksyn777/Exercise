@@ -81,7 +81,7 @@ TEST_P(PaySystemParamTest, CorrectMessage)
     streambuf* old = cout.rdbuf(buffer.rdbuf()); //pobierasz adres bufora Twojej zmienne  i ustawiasz ten bufor jako cel dla std::cout
 
     system.payment();
-    
+
     cout.rdbuf(old); //stan pierwotny
     string output = buffer.str();
 
@@ -102,3 +102,26 @@ INSTANTIATE_TEST_SUITE_P(
         make_pair("Installments", "Zaplac w ratach")
     )
 );
+
+TEST(PaySystemTest, ChangePaymentMethod)
+{
+    unique_ptr<HowPay> initialPayment = make_unique<PayByCard>();
+    PaySystem system(move(initialPayment), 1, "Testowa");
+
+    stringstream buffer;
+    streambuf* old = cout.rdbuf(buffer.rdbuf());
+
+    system.payment();
+    string output1 = buffer.str();
+    buffer.str(""); 
+
+    unique_ptr<HowPay> newPayment = make_unique<PayByBlik>();
+    system.setPayment(move(newPayment));
+    system.payment();
+    string output2 = buffer.str();
+
+    cout.rdbuf(old); 
+
+    EXPECT_NE(output1.find("Zaplac karta!"), string::npos);
+    EXPECT_NE(output2.find("Zaplac Blikiem!"), string::npos);
+}
