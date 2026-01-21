@@ -120,7 +120,7 @@ TEST(PaySystemTest, ChangePaymentMethod)
     system.payment();
     string output2 = buffer.str();
 
-    cout.rdbuf(old); 
+    cout.rdbuf(old); // Restore original buffer
 
     EXPECT_NE(output1.find("Zaplac karta!"), string::npos);
     EXPECT_NE(output2.find("Zaplac Blikiem!"), string::npos);

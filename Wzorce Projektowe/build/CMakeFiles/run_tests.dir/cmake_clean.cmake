@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "run_tests.exe"
   "run_tests.exe.manifest"
   "run_tests.pdb"
+  "run_tests[1]_tests.cmake"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,0 +1,180 @@
+{
+  "tests": 28,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ExchangeTest",
+      "tests": 18,
+      "testsuite": [
+        {
+          "name": "ExchangeShowInfo",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 25
+        },
+        {
+          "name": "ExchangeDownPrize",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 36
+        },
+        {
+          "name": "AddClientBizness",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 46
+        },
+        {
+          "name": "AddClientBiznessFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 54
+        },
+        {
+          "name": "AddClientPrivate",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 63
+        },
+        {
+          "name": "AddClientPrivateFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 71
+        },
+        {
+          "name": "AddClientGeneral",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 79
+        },
+        {
+          "name": "AddClientGeneralFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 88
+        },
+        {
+          "name": "RemovevBiznessTest",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 99
+        },
+        {
+          "name": "RemovevBiznessTestFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 109
+        },
+        {
+          "name": "RemovePrivateTest",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 119
+        },
+        {
+          "name": "RemovePrivateTestFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 128
+        },
+        {
+          "name": "RemoveGeneralTest",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 137
+        },
+        {
+          "name": "RemoveGeneralTestFalse",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 146
+        },
+        {
+          "name": "ShouldNotifyRegisteredClient",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 162
+        },
+        {
+          "name": "ShouldApplyDiscountForBiznessClient",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 175
+        },
+        {
+          "name": "ShouldApplyDiscountForPrivateClient",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 187
+        },
+        {
+          "name": "ShouldApplyDiscountForGeneralClient",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 201
+        }
+      ]
+    },
+    {
+      "name": "ExchangeNotification",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "ShouldNotNotifyAfterRemoval",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyObserwator.cpp",
+          "line": 215
+        }
+      ]
+    },
+    {
+      "name": "PayTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "TestPlatnosciKarta",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 24
+        },
+        {
+          "name": "TestPlatnoscBlikiem",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 33
+        },
+        {
+          "name": "TestPlatnoscPrzelewem",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 42
+        },
+        {
+          "name": "TestPlatnoscRaty",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "name": "PaySystemTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "ChangePaymentMethod",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 106
+        }
+      ]
+    },
+    {
+      "name": "PaymentMethods\/PaySystemParamTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "CorrectMessage\/0",
+          "value_param": "(\"Card\", \"Zaplac karta!\")",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 68
+        },
+        {
+          "name": "CorrectMessage\/1",
+          "value_param": "(\"Blik\", \"Zaplac Blikiem!\")",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 68
+        },
+        {
+          "name": "CorrectMessage\/2",
+          "value_param": "(\"Transfer\", \"Zaplac przelewem!\")",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 68
+        },
+        {
+          "name": "CorrectMessage\/3",
+          "value_param": "(\"Installments\", \"Zaplac w ratach\")",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyWzorce.cpp",
+          "line": 68
+        }
+      ]
+    }
+  ]
+}

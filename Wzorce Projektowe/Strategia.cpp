@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Klasa Abstakcyjna
+
 class HowPay
 {
     public:
@@ -11,7 +13,6 @@ class HowPay
         virtual void pay() = 0;
 };
 
-//Klasa Abstakcyjna
 class PayByCard : public HowPay
 {
     public:

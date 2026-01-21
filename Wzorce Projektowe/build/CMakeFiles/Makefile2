@@ -150,6 +150,7 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
+CMakeFiles/run_tests.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 CMakeFiles/run_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/run_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/depend
@@ -159,7 +160,7 @@ CMakeFiles/run_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" 9
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" 0
 .PHONY : CMakeFiles/run_tests.dir/rule

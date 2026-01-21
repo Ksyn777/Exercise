@@ -207,7 +207,7 @@ class GeneralClient : public Obserwator
     }
 };
 
-int main()
+/*int main()
 {
     Exchange kantor;
     vector<Obserwator*> observers;
@@ -226,3 +226,4 @@ int main()
 
     return 0;
 }
+   */
