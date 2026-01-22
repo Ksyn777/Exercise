@@ -47,7 +47,10 @@ class MessageDecorator : public Message
         {
             mess->sendMessage();
         }
-        cout<<"You are send message";
+        cout<<"You are send email to: ";
+    }
+    virtual ~MessageDecorator() {
+        delete mess; 
     }
 };
 

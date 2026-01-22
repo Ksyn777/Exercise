@@ -1,7 +1,33 @@
 {
-  "tests": 28,
+  "tests": 32,
   "name": "AllTests",
   "testsuites": [
+    {
+      "name": "DecoratorTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "FullChainCheck",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyDekorator.cpp",
+          "line": 24
+        },
+        {
+          "name": "EmailMessageCheck",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyDekorator.cpp",
+          "line": 37
+        },
+        {
+          "name": "SlackEmailCheck",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyDekorator.cpp",
+          "line": 46
+        },
+        {
+          "name": "SlackSmsEmailCheck",
+          "file": "C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyDekorator.cpp",
+          "line": 61
+        }
+      ]
+    },
     {
       "name": "ExchangeTest",
       "tests": 18,
