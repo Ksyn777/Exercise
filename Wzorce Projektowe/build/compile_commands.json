@@ -13,6 +13,12 @@
 },
 {
   "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build",
+  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/run_tests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\run_tests.dir\\testyDekorator.cpp.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\testyDekorator.cpp\"",
+  "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/testyDekorator.cpp",
+  "output": "CMakeFiles/run_tests.dir/testyDekorator.cpp.obj"
+},
+{
+  "directory": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build",
   "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/run_tests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\run_tests.dir\\Obserwator.cpp.obj -c \"C:\\Users\\Lenovo-X260\\Desktop\\ZadaniaGit\\Wzorce Projektowe\\Obserwator.cpp\"",
   "file": "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/Obserwator.cpp",
   "output": "CMakeFiles/run_tests.dir/Obserwator.cpp.obj"

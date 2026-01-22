@@ -101,11 +101,26 @@ CMakeFiles/run_tests.dir/testyObserwator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/testyObserwator.cpp.s"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\testyObserwator.cpp" -o CMakeFiles\run_tests.dir\testyObserwator.cpp.s
 
+CMakeFiles/run_tests.dir/testyDekorator.cpp.obj: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/testyDekorator.cpp.obj: CMakeFiles/run_tests.dir/includes_CXX.rsp
+CMakeFiles/run_tests.dir/testyDekorator.cpp.obj: C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce\ Projektowe/testyDekorator.cpp
+CMakeFiles/run_tests.dir/testyDekorator.cpp.obj: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/testyDekorator.cpp.obj"
+	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/testyDekorator.cpp.obj -MF CMakeFiles\run_tests.dir\testyDekorator.cpp.obj.d -o CMakeFiles\run_tests.dir\testyDekorator.cpp.obj -c "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\testyDekorator.cpp"
+
+CMakeFiles/run_tests.dir/testyDekorator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/testyDekorator.cpp.i"
+	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\testyDekorator.cpp" > CMakeFiles\run_tests.dir\testyDekorator.cpp.i
+
+CMakeFiles/run_tests.dir/testyDekorator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/testyDekorator.cpp.s"
+	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\testyDekorator.cpp" -o CMakeFiles\run_tests.dir\testyDekorator.cpp.s
+
 CMakeFiles/run_tests.dir/Obserwator.cpp.obj: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/Obserwator.cpp.obj: CMakeFiles/run_tests.dir/includes_CXX.rsp
 CMakeFiles/run_tests.dir/Obserwator.cpp.obj: C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce\ Projektowe/Obserwator.cpp
 CMakeFiles/run_tests.dir/Obserwator.cpp.obj: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/Obserwator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/Obserwator.cpp.obj"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/Obserwator.cpp.obj -MF CMakeFiles\run_tests.dir\Obserwator.cpp.obj.d -o CMakeFiles\run_tests.dir\Obserwator.cpp.obj -c "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\Obserwator.cpp"
 
 CMakeFiles/run_tests.dir/Obserwator.cpp.i: cmake_force
@@ -120,7 +135,7 @@ CMakeFiles/run_tests.dir/Strategia.cpp.obj: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/Strategia.cpp.obj: CMakeFiles/run_tests.dir/includes_CXX.rsp
 CMakeFiles/run_tests.dir/Strategia.cpp.obj: C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce\ Projektowe/Strategia.cpp
 CMakeFiles/run_tests.dir/Strategia.cpp.obj: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/Strategia.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_tests.dir/Strategia.cpp.obj"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/Strategia.cpp.obj -MF CMakeFiles\run_tests.dir\Strategia.cpp.obj.d -o CMakeFiles\run_tests.dir\Strategia.cpp.obj -c "C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\Strategia.cpp"
 
 CMakeFiles/run_tests.dir/Strategia.cpp.i: cmake_force
@@ -135,6 +150,7 @@ CMakeFiles/run_tests.dir/Strategia.cpp.s: cmake_force
 run_tests_OBJECTS = \
 "CMakeFiles/run_tests.dir/testyWzorce.cpp.obj" \
 "CMakeFiles/run_tests.dir/testyObserwator.cpp.obj" \
+"CMakeFiles/run_tests.dir/testyDekorator.cpp.obj" \
 "CMakeFiles/run_tests.dir/Obserwator.cpp.obj" \
 "CMakeFiles/run_tests.dir/Strategia.cpp.obj"
 
@@ -143,6 +159,7 @@ run_tests_EXTERNAL_OBJECTS =
 
 run_tests.exe: CMakeFiles/run_tests.dir/testyWzorce.cpp.obj
 run_tests.exe: CMakeFiles/run_tests.dir/testyObserwator.cpp.obj
+run_tests.exe: CMakeFiles/run_tests.dir/testyDekorator.cpp.obj
 run_tests.exe: CMakeFiles/run_tests.dir/Obserwator.cpp.obj
 run_tests.exe: CMakeFiles/run_tests.dir/Strategia.cpp.obj
 run_tests.exe: CMakeFiles/run_tests.dir/build.make
@@ -152,7 +169,7 @@ run_tests.exe: lib/libgtest.a
 run_tests.exe: CMakeFiles/run_tests.dir/linkLibs.rsp
 run_tests.exe: CMakeFiles/run_tests.dir/objects1.rsp
 run_tests.exe: CMakeFiles/run_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable run_tests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Lenovo-X260\Desktop\ZadaniaGit\Wzorce Projektowe\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable run_tests.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\run_tests.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=run_tests -D "TEST_EXECUTABLE=C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/run_tests.exe" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=run_tests_TESTS -D "CTEST_FILE=C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/build/run_tests[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-4.2/Modules/GoogleTestAddTests.cmake"
 

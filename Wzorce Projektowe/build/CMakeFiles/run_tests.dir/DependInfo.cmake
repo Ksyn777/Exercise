@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/Obserwator.cpp" "CMakeFiles/run_tests.dir/Obserwator.cpp.obj" "gcc" "CMakeFiles/run_tests.dir/Obserwator.cpp.obj.d"
   "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/Strategia.cpp" "CMakeFiles/run_tests.dir/Strategia.cpp.obj" "gcc" "CMakeFiles/run_tests.dir/Strategia.cpp.obj.d"
+  "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/testyDekorator.cpp" "CMakeFiles/run_tests.dir/testyDekorator.cpp.obj" "gcc" "CMakeFiles/run_tests.dir/testyDekorator.cpp.obj.d"
   "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/testyObserwator.cpp" "CMakeFiles/run_tests.dir/testyObserwator.cpp.obj" "gcc" "CMakeFiles/run_tests.dir/testyObserwator.cpp.obj.d"
   "C:/Users/Lenovo-X260/Desktop/ZadaniaGit/Wzorce Projektowe/testyWzorce.cpp" "CMakeFiles/run_tests.dir/testyWzorce.cpp.obj" "gcc" "CMakeFiles/run_tests.dir/testyWzorce.cpp.obj.d"
   )

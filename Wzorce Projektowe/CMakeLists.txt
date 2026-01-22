@@ -18,7 +18,9 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(run_tests 
     testyWzorce.cpp 
-    testyObserwator.cpp 
+    testyObserwator.cpp
+    testyDekorator.cpp
+    Dekorator.cpp 
     Obserwator.cpp
     Strategia.cpp
 ) 

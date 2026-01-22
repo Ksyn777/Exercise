@@ -273,6 +273,30 @@ Strategia.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/Strategia.cpp.s
 .PHONY : Strategia.cpp.s
 
+testyDekorator.obj: testyDekorator.cpp.obj
+.PHONY : testyDekorator.obj
+
+# target to build an object file
+testyDekorator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyDekorator.cpp.obj
+.PHONY : testyDekorator.cpp.obj
+
+testyDekorator.i: testyDekorator.cpp.i
+.PHONY : testyDekorator.i
+
+# target to preprocess a source file
+testyDekorator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyDekorator.cpp.i
+.PHONY : testyDekorator.cpp.i
+
+testyDekorator.s: testyDekorator.cpp.s
+.PHONY : testyDekorator.s
+
+# target to generate assembly for a file
+testyDekorator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/testyDekorator.cpp.s
+.PHONY : testyDekorator.cpp.s
+
 testyObserwator.obj: testyObserwator.cpp.obj
 .PHONY : testyObserwator.obj
 
@@ -344,6 +368,9 @@ help:
 	@echo ... Strategia.obj
 	@echo ... Strategia.i
 	@echo ... Strategia.s
+	@echo ... testyDekorator.obj
+	@echo ... testyDekorator.i
+	@echo ... testyDekorator.s
 	@echo ... testyObserwator.obj
 	@echo ... testyObserwator.i
 	@echo ... testyObserwator.s
