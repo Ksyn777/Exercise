@@ -1,0 +1,69 @@
+SERWER (Mózg operacji)
+
+1. Przygotowanie (Setup)
+Włącz nasłuch: Otwórz port (np. 9000) i powiedz systemowi: „Jak ktoś tu zapuka, daj mi znać”.
+
+Przygotuj listę obecności: Stwórz kontener (np. vector), w którym będziesz trzymał dane wszystkich podłączonych osób.
+
+Zabezpiecz listę: Stwórz mutex, aby wątki nie biły się o dostęp do tej listy.
+
+2. Pętla Główna (Recepcjonista)
+Ta pętla nigdy się nie kończy (while true).
+
+Czekaj na połączenie (accept): Program zatrzymuje się w tym miejscu, dopóki ktoś się nie połączy.
+
+Przywitaj się: Odczytaj pierwszą wiadomość (zazwyczaj to nick).
+
+Zapisz gościa: Dodaj go do listy obecności (pamiętaj o lock_guard!).
+
+Zatrudnij pracownika (Wątek): Nie obsługuj klienta osobiście, bo zablokujesz kolejkę. Stwórz nowy wątek, przekaż mu tego klienta i wróć do czekania na kolejnych.
+
+3. Obsługa Klienta (Praca Wątku)
+To wykonuje się równolegle dla każdego użytkownika osobno.
+
+Pętla nasłuchu: W pętli ciągle próbuj czytać dane (read_some).
+
+Sprawdź stan:
+
+Czy jest błąd (EOF)? -> Klient się rozłączył -> Przejdź do Sprzątania.
+
+Czy przyszły dane? -> Przetwórz je.
+
+Logika (Mózg):
+
+Czy to komenda (np. /join)? -> Zmień ustawienia klienta (pokój).
+
+Czy to wiadomość? -> Sformatuj ją (dodaj nick/pokój).
+
+Rozsyłanie (Broadcasting): Przeiteruj przez listę wszystkich klientów. Jeśli klient jest w tym samym pokoju (i to nie ja sam) -> wyślij mu dane (write).
+
+Sprzątanie: Usuń klienta z listy (bezpiecznie, z mutexem) i zamknij wątek.
+
+
+
+
+1. Połączenie
+Znajdź serwer: Podaj IP i Port.
+
+Połącz się: Jeśli się uda, wyślij od razu swój identyfikator (nick).
+
+2. Rozdwojenie jaźni (Dwa wątki)
+Wątek A: Ucho (Słuchanie serwera)
+
+Działa w tle (thread lub async).
+
+W nieskończonej pętli czeka na dane z socketu (read_some).
+
+Jak coś przyjdzie -> Wypisuje na ekran (cout).
+
+Jak serwer zamknie połączenie (EOF) -> Zamyka program.
+
+Wątek B: Usta (Pisanie do serwera)
+
+To zazwyczaj główny wątek programu (main).
+
+W nieskończonej pętli czeka, aż coś wpiszesz (getline).
+
+Wysyła to surowo do serwera (write).
+
+Obsługuje lokalne komendy wyjścia (np. jeśli wpiszesz /quit, przerywa pętlę).
