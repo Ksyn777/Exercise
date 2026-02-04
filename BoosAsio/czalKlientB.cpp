@@ -21,7 +21,6 @@ int main() {
         boost::asio::connect(socket, endpoints);
         cout << "Polaczono z serwerem!\n";
 
-        // 3️⃣ Podanie nicku
         string nick;
         cout << "Podaj swoj nick: ";
         getline(cin, nick);
@@ -60,7 +59,7 @@ int main() {
             }
         });
 
-        // 5️⃣ Pętla wysyłania wiadomości
+        
         string message;
         while (true) {
             cout << "> ";
